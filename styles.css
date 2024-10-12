@@ -1,0 +1,441 @@
+:root {
+  --primary-color: #1a3a5e;
+  --secondary-color: #f0b941;
+  --accent-color: #ff6f61;
+  --text-color: #333333;
+  --background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info span {
+  margin-right: 20px;
+}
+
+.social-links a {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+.main-nav {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://www.lachoomemorial.org/images/slider/slider1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0a930;
+}
+
+/* Quick Links Section */
+.quick-links {
+  background-color: white;
+  padding: 40px 0;
+}
+
+.quick-links .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quick-link-item {
+  text-align: center;
+  flex-basis: 22%;
+}
+
+.quick-link-item i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.quick-link-item h3 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* About Us Section */
+.about-us {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+.about-us h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  margin-bottom: 30px;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #15304d;
+}
+
+/* Featured Programs Section */
+.featured-programs {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.featured-programs h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.program-card {
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.program-card i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.program-card h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* News and Events Section */
+.news-events {
+  padding: 60px 0;
+  background-color: var(--background-color);
+}
+
+.news-events .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-column, .events-column {
+  flex-basis: 48%;
+}
+
+.news-events h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.news-item, .event-item {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+}
+
+.news-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.news-content h3, .event-content h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+}
+
+.event-date {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex-basis: 23%;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column .social-links {
+  display: flex;
+}
+
+.footer-column .social-links a {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newsletter-form button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e0a930;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .quick-links .container {
+    flex-wrap: wrap;
+  }
+
+  .quick-link-item {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+
+  .news-events .container {
+    flex-direction: column;
+  }
+
+  .news-column, .events-column {
+    flex-basis: 100%;
+  }
+
+  .footer-column {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .quick-link-item {
+    flex-basis: 100%;
+  }
+
+  .footer-column {
+    flex-basis: 100%;
+  }
+}
